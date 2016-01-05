@@ -3,12 +3,24 @@
 import UIKit
 
 class Dog {
-    var weight: Int = 0
+    var weight: Int
     var height: Int = 0
     let numberOfLegs = 4
     
-    
+    init(weight:Int) {
+        self.weight = weight
+    }
     
 }
-let testDog = Dog()
+var varDog = Dog(weight: 100)
+varDog.weight = 30
+
+let testDog = Dog(weight:50)
+testDog.weight = 400
 print(testDog.numberOfLegs)
+print(testDog.weight)
+
+varDog = testDog
+//testDog = varDog - cant do this because testDog is a constant
+
+
