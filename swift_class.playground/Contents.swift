@@ -36,3 +36,44 @@ class Labrador: Dog {
     
 }
 
+class Base {
+    var prop: Int = 0
+}
+
+class Sub: Base {
+    override var prop: Int {
+        get {
+            return super.prop
+        }
+        set {
+            super.prop = 3 * 2
+        }
+    }
+}
+
+let base = Base()
+print(base.prop)
+
+let sub = Sub()
+print(sub.prop)
+sub.prop = 19
+
+print(sub.prop)
+
+class Base2 {
+    var prop: Int = 0
+}
+
+class Sub2: Base2 {
+    override init() {
+        super.init()
+        self.prop = 3
+    }
+}
+
+let base2 = Base2()
+print(base2.prop)
+
+let sub2 = Sub2()
+print(sub2.prop)
+
