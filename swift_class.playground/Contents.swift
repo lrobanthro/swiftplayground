@@ -5,10 +5,11 @@ import UIKit
 class Dog {
     var weight: Int
     var height: Int = 0
-    let numberOfLegs = 4
+    let numberOfLegs: Int
     
     init(weight:Int) {
         self.weight = weight
+        self.numberOfLegs = 4
     }
     
 }
@@ -23,4 +24,15 @@ print(testDog.weight)
 varDog = testDog
 //testDog = varDog - cant do this because testDog is a constant
 
+
+class Labrador: Dog {
+    let color: UIColor
+    //override var numberOfLegs: Int
+    
+    init(color: UIColor, weight:Int) {
+        self.color = color
+        super.init(weight: weight)
+    }
+    
+}
 
